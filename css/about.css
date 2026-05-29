@@ -1,0 +1,445 @@
+/* 
+================================================================
+   iBrains About & Team Page Stylesheet
+================================================================
+*/
+
+/* ==========================================
+   Company Profile/Story Section
+   ========================================== */
+.about-hero {
+  padding-top: calc(var(--header-height) + 2rem);
+  background: radial-gradient(circle at 90% 10%, rgba(0, 180, 216, 0.08) 0%, transparent 50%), var(--white);
+}
+
+.about-intro-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.about-intro-text h2 {
+  font-size: 2.25rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+}
+
+.about-intro-text p {
+  color: var(--text-dark);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
+}
+
+.about-intro-highlights {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.about-highlight-box {
+  padding: 1.5rem;
+  border-radius: var(--border-radius-sm);
+  background-color: var(--smoke-white);
+  border-left: 4px solid var(--secondary);
+}
+
+.about-highlight-box h4 {
+  color: var(--primary);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.about-highlight-box p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+.about-intro-image {
+  position: relative;
+}
+
+.about-img-frame {
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(10, 31, 68, 0.1);
+  position: relative;
+  z-index: 2;
+}
+
+.about-img-frame img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+}
+
+.about-intro-image::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 100%;
+  height: 100%;
+  border: 4px solid var(--secondary);
+  border-radius: var(--border-radius-lg);
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+/* ==========================================
+   Milestones / Timeline Section
+   ========================================== */
+.timeline-section {
+  background-color: var(--smoke-white);
+}
+
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background: linear-gradient(to bottom, var(--primary), var(--secondary), var(--accent));
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 2rem 3rem;
+  box-sizing: border-box;
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%;
+  text-align: left;
+}
+
+.timeline-dot {
+  position: absolute;
+  top: 2.5rem;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--white);
+  border: 4px solid var(--secondary);
+  z-index: 5;
+  box-shadow: 0 0 10px rgba(0, 180, 216, 0.5);
+  transition: var(--transition);
+}
+
+.timeline-item:nth-child(odd) .timeline-dot {
+  right: -10px;
+}
+
+.timeline-item:nth-child(even) .timeline-dot {
+  left: -10px;
+}
+
+.timeline-item:hover .timeline-dot {
+  background-color: var(--accent);
+  border-color: var(--primary);
+  transform: scale(1.3);
+  box-shadow: 0 0 15px rgba(0, 245, 212, 0.8);
+}
+
+.timeline-content {
+  padding: 2rem;
+  background-color: var(--white);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: var(--transition);
+  position: relative;
+}
+
+.timeline-item:hover .timeline-content {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 180, 216, 0.1);
+  border-color: rgba(0, 180, 216, 0.2);
+}
+
+.timeline-date {
+  font-family: var(--font-headings);
+  font-weight: 800;
+  font-size: 1.25rem;
+  color: var(--secondary);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.timeline-content h3 {
+  font-size: 1.3rem;
+  color: var(--primary);
+  margin-bottom: 0.75rem;
+}
+
+.timeline-content p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ==========================================
+   Meet the Team Section
+   ========================================== */
+.team-section {
+  background-color: var(--white);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+.team-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--glass-border);
+  background: var(--white);
+  box-shadow: 0 15px 35px rgba(10, 31, 68, 0.05);
+}
+
+.team-card-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+}
+
+.team-card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-card:hover .team-card-img-wrap img {
+  transform: scale(1.08);
+}
+
+.team-img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent 40%, rgba(10, 31, 68, 0.85) 100%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.team-card:hover .team-img-overlay {
+  opacity: 1;
+}
+
+.team-card-socials {
+  display: flex;
+  gap: 1rem;
+  transform: translateY(20px);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.team-card:hover .team-card-socials {
+  transform: translateY(0);
+}
+
+.team-card-socials a {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: var(--white);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.team-card-socials a:hover {
+  background-color: var(--secondary);
+  color: var(--white);
+  transform: scale(1.1);
+}
+
+.team-card-body {
+  padding: 2.25rem 2rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.team-member-name {
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+}
+
+.team-member-role {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1.25rem;
+}
+
+.team-member-bio {
+  color: var(--text-dark);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.team-card-section-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--primary);
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.team-skills-tags,
+.team-tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.team-skills-tags span {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 30px;
+  background-color: rgba(10, 31, 68, 0.05);
+  color: var(--primary);
+}
+
+.team-tech-tags span {
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.25rem 0.65rem;
+  border-radius: 4px;
+  background-color: rgba(0, 180, 216, 0.08);
+  color: #0077B6;
+  border: 1px solid rgba(0, 180, 216, 0.15);
+}
+
+.team-contributions {
+  padding: 1rem;
+  background-color: var(--smoke-white);
+  border-radius: var(--border-radius-sm);
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  border-left: 3px solid var(--accent);
+}
+
+.team-certifications {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-dark);
+  font-weight: 600;
+  background-color: rgba(0, 245, 212, 0.08);
+  padding: 0.6rem 1rem;
+  border-radius: var(--border-radius-sm);
+  border: 1px solid rgba(0, 245, 212, 0.2);
+}
+
+.team-certifications i {
+  color: #00B4D8;
+  font-size: 1rem;
+}
+
+/* ==========================================
+   Responsive About Page Styles
+   ========================================== */
+@media (max-width: 1024px) {
+  .about-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .about-intro-image {
+    max-width: 550px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  .about-img-frame img {
+    height: 380px;
+  }
+  
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 20px;
+  }
+  
+  .timeline-item {
+    width: 100%;
+    padding-left: 3.5rem;
+    padding-right: 0;
+  }
+  
+  .timeline-item:nth-child(odd) {
+    text-align: left;
+  }
+  
+  .timeline-item:nth-child(odd) .timeline-dot,
+  .timeline-item:nth-child(even) .timeline-dot {
+    left: 10px;
+    right: auto;
+  }
+  
+  .team-grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+  
+  .about-highlight-box {
+    padding: 1.25rem;
+  }
+}
