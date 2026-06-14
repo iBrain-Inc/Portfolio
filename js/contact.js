@@ -160,8 +160,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Handle Form Submission
   contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
+    // Let Formspree handle the actual POST submission.
+    // We only prevent submission when client-side validation fails.
+
     const nameEl = document.getElementById('name');
     const emailEl = document.getElementById('email');
     const subjectEl = document.getElementById('subject');
@@ -213,29 +214,21 @@ document.addEventListener('DOMContentLoaded', () => {
       clearError(messageEl);
     }
 
-    // If form is valid, trigger simulated submission
+    // If form is valid, submit to Formspree.
+    // We show the success modal, but actual submission will still happen normally.
     if (!hasError) {
       if (submitBtn) {
         submitBtn.disabled = true;
         submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
       }
 
-      // Simulate API loading
-      setTimeout(() => {
-        const userName = nameEl.value.trim();
-        
-        // Show success modal
-        createSuccessModal(userName);
-        
-        // Clear all inputs
-        contactForm.reset();
-        
-        // Reset submit button state
-        if (submitBtn) {
-          submitBtn.disabled = false;
-          submitBtn.innerHTML = originalBtnText;
-        }
-      }, 1500);
+      const userName = nameEl.value.trim();
+      createSuccessModal(userName);
+      // Do NOT call preventDefault() here so Formspree receives the POST.
+      return;
     }
+
+    // Prevent submission when validation fails.
+    e.preventDefault();
   });
 });

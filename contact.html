@@ -76,7 +76,7 @@
               </div>
               <div class="contact-method-info">
                 <h4>Email Address</h4>
-                <p><a href="mailto:info@ibrains.tech" id="contact-email-link">info@ibrains.tech</a></p>
+                <p><a href="mailto:ibrains2026@gmail.com" id="contact-email-link">ibrains2026@gmail.com</a></p>
               </div>
             </div>
             <!-- WhatsApp -->
@@ -86,7 +86,7 @@
               </div>
               <div class="contact-method-info">
                 <h4>WhatsApp Number</h4>
-                <p><a href="https://wa.me/1234567890" target="_blank" id="contact-whatsapp-link">+1 (234) 567-890</a></p>
+<a href="https://wa.me/072035257" target="_blank" id="contact-whatsapp-link">072035257</a>
               </div>
             </div>
             <!-- Address -->
@@ -96,7 +96,7 @@
               </div>
               <div class="contact-method-info">
                 <h4>Physical Location</h4>
-                <p>Innovation Hub, Silicon Alley,<br>Tech City, NY 10001</p>
+                <p>Innovation Hub, Silicon Alley, Tech City, NY 10001</p>
               </div>
             </div>
           </div>
@@ -105,9 +105,9 @@
           <div class="contact-info-socials">
             <h4>Social Channels</h4>
             <div class="contact-social-grid">
-              <a href="https://github.com/ibrains-team" target="_blank" aria-label="GitHub Organization" id="social-github"><i class="fab fa-github"></i></a>
-              <a href="https://linkedin.com/company/ibrains" target="_blank" aria-label="LinkedIn" id="social-linkedin"><i class="fab fa-linkedin-in"></i></a>
-              <a href="https://wa.me/1234567890" target="_blank" aria-label="WhatsApp Business" id="social-whatsapp"><i class="fab fa-whatsapp"></i></a>
+              <a href="https://github.com/iBrain-Inc" target="_blank" aria-label="GitHub Organization" id="social-github"><i class="fab fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/ibrain-inc-b97852416/?isSelfProfile=true" target="_blank" aria-label="LinkedIn" id="social-linkedin"><i class="fab fa-linkedin-in"></i></a>
+<a href="https://wa.me/072035257" target="_blank" aria-label="WhatsApp Business" id="social-whatsapp"><i class="fab fa-whatsapp"></i></a>
             </div>
           </div>
         </div>
@@ -117,26 +117,28 @@
           <h3>Send Us a Message</h3>
           <p>Please enter your credentials and project specs, and an engineer will respond within 24 hours.</p>
           
-          <form id="contact-form" novalidate>
+          <form id="contact-form" novalidate method="POST" action="https://formspree.io/f/mqeowdde">
+            <input type="hidden" name="_subject" value="New iBrains Contact Form Submission" />
+
             <div class="form-row">
               <div class="form-group">
                 <label for="name">Full Name</label>
-                <input type="text" id="name" placeholder="John Doe" autocomplete="name">
+                <input type="text" id="name" name="name" placeholder="iBrains Team" autocomplete="name" required>
               </div>
               <div class="form-group">
                 <label for="email">Email Address</label>
-                <input type="email" id="email" placeholder="john@example.com" autocomplete="email">
+                <input type="email" id="email" name="email" placeholder="ibrain@example.com" autocomplete="email" required>
               </div>
             </div>
             
             <div class="form-group">
               <label for="subject">Subject</label>
-              <input type="text" id="subject" placeholder="Project Inquiry / Consulting Quote">
+              <input type="text" id="subject" name="subject" placeholder="Project Inquiry / Consulting Quote" required>
             </div>
             
             <div class="form-group">
               <label for="message">Message</label>
-              <textarea id="message" placeholder="Describe your software requirements, tech stack, and approximate deployment timeline..."></textarea>
+              <textarea id="message" name="message" placeholder="Describe your software requirements, tech stack, and approximate deployment timeline..." required></textarea>
             </div>
             
             <button type="submit" class="btn btn-primary" id="submit-btn">
@@ -149,49 +151,7 @@
     </div>
   </section>
 
-  <!-- Interactive Map Section -->
-  <section class="map-section">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-subtitle">Our Location</span>
-        <h2 class="section-title">Visit Our <span>Innovation HQ</span></h2>
-        <p class="section-desc">Located in the heart of Tech City, our modern design office is where ideas are engineered into solutions.</p>
-      </div>
-      
-      <!-- Styled map container -->
-      <div class="map-container reveal">
-        <div class="mock-map">
-          <!-- Grid styling and vector path simulation -->
-          <div class="mock-map-grid"></div>
-          <div class="mock-map-vector vector-1"></div>
-          <div class="mock-map-vector vector-2"></div>
-          
-          <div class="mock-map-roads">
-            <div class="mock-map-road road-h1"></div>
-            <div class="mock-map-road road-h2"></div>
-            <div class="mock-map-road road-v1"></div>
-            <div class="mock-map-road road-v2"></div>
-          </div>
-          
-          <!-- Pulsing Map Pin -->
-          <div class="mock-map-pin-wrap">
-            <div class="mock-map-pulse"></div>
-            <div class="mock-map-pin">
-              <i class="fas fa-server"></i>
-            </div>
-          </div>
-          
-          <!-- Glassmorphic Map Info overlay -->
-          <div class="mock-map-card">
-            <h4>iBrains Technology Corp</h4>
-            <p>Suite 404, Innovation Hub, Silicon Alley, Tech City, NY 10001</p>
-            <p><i class="fas fa-clock"></i> Mon - Fri, 9:00 AM - 6:00 PM EST</p>
-            <a href="https://maps.google.com" target="_blank"><i class="fas fa-directions"></i> Get Directions on Google Maps</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  
 
   <!-- Interactive Scroll-to-Top Button -->
   <button class="scroll-top-btn" aria-label="Scroll back to top">
@@ -207,7 +167,7 @@
         <div class="footer-socials">
           <a href="https://github.com/ibrains-team" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
           <a href="https://linkedin.com/company/ibrains" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://wa.me/1234567890" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://wa.me/072035257" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
         </div>
       </div>
       <div class="footer-links">
@@ -220,12 +180,12 @@
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </div>
-      <div class="footer-contact">
+          <div class="footer-contact">
         <h3>Contact Info</h3>
         <ul>
-          <li><i class="fas fa-envelope"></i> <span>info@ibrains.tech</span></li>
-          <li><i class="fas fa-map-marker-alt"></i> <span>Innovation Hub, Silicon Alley, Tech City, NY 10001</span></li>
-          <li><i class="fas fa-phone-alt"></i> <span>+1 (234) 567-890</span></li>
+          <li><i class="fas fa-envelope"></i> <span>ibrains2026@gmail.com</span></li>
+          <li><i class="fas fa-map-marker-alt"></i> <span>Innovation Hub,Tech City, </span></li>
+          <li><i class="fas fa-phone-alt"></i> <span>+254720352257</span></li>
         </ul>
       </div>
       <div class="footer-newsletter">
